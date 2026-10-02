@@ -50,7 +50,8 @@ ul { list-style: none; margin: 0; padding: 0; }
 
 /* Header */
 .site-header {
-  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10;
+  position: sticky; top: 0; z-index: 10;
+  padding-top: env(safe-area-inset-top, 0px); /* fill the notch area instead of leaving a gap above the bar */
   background: rgba(233, 226, 212, 0.96); backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--stone);
 }
