@@ -133,8 +133,6 @@ ul { list-style: none; margin: 0; padding: 0; }
 /* Footer */
 .site-footer { padding-block: 28px; background: var(--charcoal); border-top: 1px solid #45433e; color: #a9a294; font-size: 0.9rem; }
 .footer-row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
-.credits { margin-top: 14px; font-size: 0.78rem; }
-.credits a { color: #a9a294; }
 
 /* Gentle fade-in, applied only below the first screen */
 .js .fade { transition: opacity .8s ease, transform .8s ease; }
@@ -149,9 +147,8 @@ ul { list-style: none; margin: 0; padding: 0; }
 .car .photo img { filter: grayscale(1) brightness(0.72) contrast(1.15); }
 .hero-photo img { filter: saturate(0.85); }
 
-/* Fleet photos: studio shots sit on their own white; stock photos are toned dark to match */
+/* Fleet photos: studio shots on their own white background */
 .car .photo { aspect-ratio: 1024 / 559; background: #f4f4f2; }
 .car .photo img { filter: none; }
-.car .photo--stock img { filter: grayscale(1) brightness(0.72) contrast(1.15); }
 .hero-photo { aspect-ratio: 5 / 4; }
 .hero-photo img { filter: none; object-position: 50% 55%; }
