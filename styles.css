@@ -110,16 +110,17 @@ ul { list-style: none; margin: 0; padding: 0; }
 @media (max-width: 1000px) { .services { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 560px) { .services { grid-template-columns: 1fr; } }
 
-/* Fleet: a compact two-column list for a quick glance */
+/* Fleet: a simple photo grid, name only */
 .fleet-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: clamp(24px, 5vw, 72px); align-items: end; }
 .fleet-head p { color: var(--muted); }
-.fleet { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: clamp(24px, 5vw, 72px); margin-top: 36px; border-top: 1px solid var(--stone); }
-.car { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 18px; align-items: center; padding-block: 14px; border-bottom: 1px solid var(--stone); }
-.car .photo { aspect-ratio: 3 / 2; border-radius: 4px; }
-.car h3 { font-size: 1.05rem; }
-.car p { color: var(--muted); font-size: 0.95rem; }
+.fleet { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 40px 24px; margin-top: 40px; }
+.car { display: grid; gap: 12px; justify-items: center; }
+.car .photo { width: 100%; aspect-ratio: 1024 / 559; border-radius: var(--radius); background: #f4f4f2; }
+.car h3 { font-size: 1rem; font-weight: 400; color: var(--text); text-align: center; }
 @media (max-width: 760px) {
-  .fleet-head, .fleet { grid-template-columns: 1fr; }
+  .fleet-head { grid-template-columns: 1fr; }
+  .fleet { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 16px; }
+  .car h3 { font-size: 0.95rem; }
 }
 
 /* Contact band */
@@ -143,12 +144,5 @@ ul { list-style: none; margin: 0; padding: 0; }
 }
 .car .photo.is-missing::after { content: ""; }
 
-/* Keep every fleet photo in one dark, even tone */
-.car .photo img { filter: grayscale(1) brightness(0.72) contrast(1.15); }
-.hero-photo img { filter: saturate(0.85); }
-
-/* Fleet photos: studio shots on their own white background */
-.car .photo { aspect-ratio: 1024 / 559; background: #f4f4f2; }
-.car .photo img { filter: none; }
 .hero-photo { aspect-ratio: 5 / 4; }
-.hero-photo img { filter: none; object-position: 50% 55%; }
+.hero-photo img { object-position: 50% 55%; }
