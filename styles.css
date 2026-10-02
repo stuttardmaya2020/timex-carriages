@@ -1,11 +1,11 @@
 /* Layout: warm stone and sand bands with charcoal type and a muted gold accent.
    Calm, formal and easy to scan: hero, values, about, services, a compact fleet list, contact. */
 :root {
-  --bg: #f6f2ea;          /* warm ivory page */
-  --sand: #ebe4d6;        /* beige bands */
-  --stone: #d8d2c6;       /* hairlines and photo frames */
+  --bg: #e9e2d4;          /* warm sand page */
+  --sand: #ddd4c3;        /* deeper beige bands */
+  --stone: #c6bdad;       /* hairlines and photo frames */
   --text: #2b2a27;        /* charcoal */
-  --muted: #625d55;       /* warm grey */
+  --muted: #57524a;       /* warm grey */
   --charcoal: #2e2d2a;    /* contact band */
   --gold: #d0ac45;        /* muted yellow-gold for buttons */
   --gold-deep: #846716;   /* gold for small text on light ground */
@@ -51,7 +51,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 /* Header */
 .site-header {
   position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10;
-  background: rgba(246, 242, 234, 0.95); backdrop-filter: blur(8px);
+  background: rgba(233, 226, 212, 0.96); backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--stone);
 }
 .nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 72px; }
@@ -143,3 +143,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   html { scroll-behavior: auto; }
 }
 .car .photo.is-missing::after { content: ""; }
+
+/* Keep every fleet photo in one dark, even tone */
+.car .photo img { filter: grayscale(1) brightness(0.72) contrast(1.15); }
+.hero-photo img { filter: saturate(0.85); }
