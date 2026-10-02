@@ -148,3 +148,10 @@ ul { list-style: none; margin: 0; padding: 0; }
 /* Keep every fleet photo in one dark, even tone */
 .car .photo img { filter: grayscale(1) brightness(0.72) contrast(1.15); }
 .hero-photo img { filter: saturate(0.85); }
+
+/* Fleet photos: studio shots sit on their own white; stock photos are toned dark to match */
+.car .photo { aspect-ratio: 1024 / 559; background: #f4f4f2; }
+.car .photo img { filter: none; }
+.car .photo--stock img { filter: grayscale(1) brightness(0.72) contrast(1.15); }
+.hero-photo { aspect-ratio: 5 / 4; }
+.hero-photo img { filter: none; object-position: 50% 55%; }
