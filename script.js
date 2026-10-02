@@ -18,7 +18,7 @@ document.querySelectorAll('.photo img').forEach(function (img) {
       if (e.isIntersecting) { e.target.classList.remove('pre'); io.unobserve(e.target); }
     });
   }, { rootMargin: '0px 0px -6% 0px' });
-  document.querySelectorAll('.section .wrap > *, .car').forEach(function (el) {
+  document.querySelectorAll('.section .wrap > *, .pillars-grid > div').forEach(function (el) {
     if (el.getBoundingClientRect().top > window.innerHeight) {
       el.classList.add('fade', 'pre');
       io.observe(el);
