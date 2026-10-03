@@ -146,3 +146,8 @@ ul { list-style: none; margin: 0; padding: 0; }
 
 .hero-photo { aspect-ratio: 5 / 4; }
 .hero-photo img { object-position: 50% 55%; }
+
+/* Secondary button for the dark contact band */
+.btn--ghost { background: transparent; color: #f1ece2; border-color: #8f887b; }
+.btn--ghost:hover { background: transparent; border-color: var(--gold); color: var(--gold); }
+.footer-links { display: flex; flex-wrap: wrap; gap: 8px 24px; }
